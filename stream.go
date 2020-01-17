@@ -103,7 +103,7 @@ func (stream *Stream) Flush() error {
 	if stream.Error != nil {
 		return stream.Error
 	}
-	n, err := stream.out.Write(stream.buf)
+	_, err := stream.out.Write(stream.buf)
 	if err != nil {
 		if stream.Error == nil {
 			stream.Error = err
