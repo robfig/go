@@ -110,7 +110,7 @@ func (stream *Stream) Flush() error {
 		}
 		return err
 	}
-	stream.buf = stream.buf[n:]
+	stream.buf = stream.buf[:0]
 	return nil
 }
 
